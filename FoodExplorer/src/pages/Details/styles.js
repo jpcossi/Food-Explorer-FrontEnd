@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 105px auto;
+  grid-template-rows: 104px auto;
   grid-template-areas: 
   "header"
   "content";
@@ -20,12 +20,7 @@ export const Container = styled.div`
     opacity: 0.8;
   }
 
-
-  > h1{
-    margin-left: 200px;
-    margin-top: 62px;    
-    margin-bottom: 22.5px;
-
+  > h1{ 
     font-family: 'Poppins', sans-serif;
     font-size: 32px;
     font-weight: 500;
@@ -91,5 +86,4 @@ export const Card = styled.div`
     top: -4%;
   }
 `
-
 

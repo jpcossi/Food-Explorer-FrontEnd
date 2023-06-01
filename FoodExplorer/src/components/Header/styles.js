@@ -42,6 +42,7 @@ export const LoganAdmin = styled.div`
 export const Logout = styled.button`
   border: none;
   background: none;
+  cursor: pointer;
 
   > svg{
     width: 32px;
