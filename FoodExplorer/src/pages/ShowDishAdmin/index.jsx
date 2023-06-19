@@ -4,12 +4,12 @@ import { Tags } from '../../components/Tags'
 import { Footer } from '../../components/Footer'
 import { ButtonDish } from '../../components/ButtonDish'
 import { ButtonTextBack } from '../../components/ButtonTextBack'
-import { Header } from '../../components/Header/index.jsx'
+import { HeaderAdmin } from '../../components/HeaderAdmin'
 
-export function ShowDish(){
+export function ShowDishAdmin(){
   return(
     <Container>
-      <Header title="Novo Prato"></Header>
+      <HeaderAdmin title="Novo Prato"></HeaderAdmin>
       <main>
         <ButtonTextBack title="voltar"></ButtonTextBack>
         <div className='hero'> 

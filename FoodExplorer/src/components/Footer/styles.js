@@ -13,7 +13,7 @@ export const Container = styled.footer`
   background-color: ${({theme}) => theme.COLORS.Dark_600};
   
   > p {
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;

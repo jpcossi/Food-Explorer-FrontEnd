@@ -13,7 +13,6 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-evenly;
   
-
 `
 
 export const Button = styled.button`
@@ -34,9 +33,6 @@ export const Button = styled.button`
   &:disabled{
     opacity: 0.5;
   }
-`
-
-export const LoganAdmin = styled.div`
 `
 
 export const Logout = styled.button`

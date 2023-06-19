@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-border: none;
+  border: none;
   border-radius: 5px;
   padding: 12px 24px 12px 24px;
 
