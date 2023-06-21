@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Container, Form } from "./styles";
 import { InputText } from '../../components/InputText'
 import { ButtonDish } from '../../components/ButtonDish'
@@ -20,7 +22,9 @@ export function SignIn(){
           <InputText type="password" placeholder="No mínimo 6 caracteres"></InputText>
         </section>
         <ButtonDish  className="button" title="Entrar"></ButtonDish>
-        <ButtonTextAccount title="Criar uma Conta"></ButtonTextAccount> 
+        <Link to="/register">
+          <ButtonTextAccount title="Criar uma Conta"></ButtonTextAccount>         
+        </Link>
       </Form>
     </Container>
   )

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.header`
   height: 104px;
@@ -43,7 +44,7 @@ export const Button = styled.button`
   }
 `
 
-export const Logout = styled.button`
+export const Logout = styled(Link)`
   border: none;
   background: none;
   cursor: pointer;

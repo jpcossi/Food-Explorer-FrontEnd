@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import { Container, Form, InputImage, InputSelect, Item} from "./styles.js"
 import { HeaderAdmin } from '../../components/HeaderAdmin'
 import { Footer } from '../../components/Footer'
@@ -14,7 +16,9 @@ export function EditDish(){
     <Container>
       <HeaderAdmin title="Novo Prato"></HeaderAdmin>
       <Form>
-        <ButtonTextBack title="voltar"></ButtonTextBack>
+        <Link to="/homeAdmin">
+          <ButtonTextBack title="voltar"></ButtonTextBack>
+        </Link>
         <h1>Editar Prato</h1>
         <div className="hero">
           <section className="section1">

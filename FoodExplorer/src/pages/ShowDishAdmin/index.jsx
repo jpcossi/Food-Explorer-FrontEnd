@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { Container } from './styles.js'
 
 import { Tags } from '../../components/Tags'
@@ -11,7 +13,9 @@ export function ShowDishAdmin(){
     <Container>
       <HeaderAdmin title="Novo Prato"></HeaderAdmin>
       <main>
-        <ButtonTextBack title="voltar"></ButtonTextBack>
+        <Link to="/homeAdmin">
+          <ButtonTextBack title="voltar"></ButtonTextBack>
+        </Link>
         <div className='hero'> 
           <section className='left'>
             <img className="image" src="../../../assets/Images-Dishes/Mask group.png" alt="" />
@@ -26,7 +30,9 @@ export function ShowDishAdmin(){
                 <Tags title="Agrião"></Tags>
                 <Tags title="Pão Naan"></Tags>
               </div>
-              <ButtonDish title="Editar Prato"></ButtonDish>
+              <Link to="/edit">
+                <ButtonDish title="Editar Prato"></ButtonDish>
+              </Link>
           </section>
         </div>
       </main>

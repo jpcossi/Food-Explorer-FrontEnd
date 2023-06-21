@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Container } from "./styles";
 import { Tags } from "../../components/Tags";
 import { Footer } from "../../components/Footer";
@@ -14,7 +16,9 @@ export function ShowDishUser(){
     <Container>
       <HeaderUser icon={TfiReceipt} title="Pedidos (0)"></HeaderUser>
       <main>
-        <ButtonTextBack title="voltar"></ButtonTextBack>
+        <Link to="/home">
+          <ButtonTextBack title="voltar"></ButtonTextBack>
+        </Link>
         <div className='hero'> 
           <section className='left'>
             <img className="image" src="../../../assets/Images-Dishes/Mask group.png" alt="" />

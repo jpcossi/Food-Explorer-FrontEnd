@@ -5,10 +5,11 @@ export const Container = styled.div`
   height: 100vh;
 
   > main {
+    margin: auto;
+    width: 1150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
- }
+  }
 
   > h1{ 
     font-family: 'Poppins', sans-serif;
@@ -88,7 +89,7 @@ export const Card = styled.div`
     line-height: 34px;
     letter-spacing: 0em;
     text-align: center;
-
+    color: ${({theme}) => theme.COLORS.Light_300};
   }
 
   > p{    

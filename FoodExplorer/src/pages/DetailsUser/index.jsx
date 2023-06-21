@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Container, Card } from "./styles";
 import { Footer } from "../../components/Footer"
 import { Section } from "../../components/Section"
@@ -16,20 +18,22 @@ export function DetailsUser(){
       <main>
         <WelcomeDiv />
         <Section className="section1" title="Refeições">
-          <Card className="card">
-            <img className="image" src="../../../assets/Images-Dishes/Mask group.png" alt="" />
-            <h2>Salada Ravanello</h2>
-            <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</p>
-            <h3>R$ 49,97</h3>
-            <div>
-              <div className="divCount">
-                <ButtonDish icon={FiMinus} className="buttonMinus"/>
-                <h4>01</h4>
-                <ButtonDish icon={FiPlus} className="buttonPlus"/>
+          <Link to="/dish">
+            <Card className="card">
+              <img className="image" src="../../../assets/Images-Dishes/Mask group.png" alt="" />
+              <h2>Salada Ravanello</h2>
+              <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</p>
+              <h3>R$ 49,97</h3>
+              <div>
+                <div className="divCount">
+                  <ButtonDish icon={FiMinus} className="buttonMinus"/>
+                  <h4>01</h4>
+                  <ButtonDish icon={FiPlus} className="buttonPlus"/>
+                </div>
+                <ButtonDish title="Incluir"/>
               </div>
-              <ButtonDish title="Incluir"/>
-            </div>
-          </Card>
+            </Card>
+          </Link>
           <Card>
             <img className="image" src="../../../assets/Images-Dishes/Mask group.png" alt="" />
             <h2>Salada Ravanello</h2>

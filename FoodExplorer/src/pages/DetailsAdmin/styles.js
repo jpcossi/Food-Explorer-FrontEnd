@@ -10,14 +10,11 @@ export const Container = styled.div`
   "header"
   "content";
   
-  > .fruit{
-    position: absolute;
-    left: 150.18px;
-    top: 130.06px;
-  
-    width: 656.17px;
-    height: 412.56px;
-    opacity: 0.8;
+  > main {
+    margin: auto;
+    width: 1150px;
+    display: flex;
+    flex-direction: column;
   }
 
   > h1{ 
@@ -43,6 +40,13 @@ export const Card = styled.div`
   border: 1px solid ${({theme}) => theme.COLORS.Dark_300};
   background-color: ${({theme}) => theme.COLORS.Dark_200};
 
+  
+  > .edit {
+    position: relative;
+    left: 48%;
+    top: -4%;
+  }
+
   > .image{
     height: 176px;
     width: 176px;
@@ -54,8 +58,8 @@ export const Card = styled.div`
     font-weight: 700;
     line-height: 34px;
     letter-spacing: 0em;
-    text-align: center;
-
+    text-align: center;    
+    color: ${({theme}) => theme.COLORS.Light_300};
   }
 
   > p{    
@@ -79,11 +83,6 @@ export const Card = styled.div`
 
     color: ${({theme}) => theme.COLORS.Tints_cake_200};
   }
-
-  > svg{
-    position: relative;
-    left: 48%;
-    top: -4%;
-  }
+  
 `
 
