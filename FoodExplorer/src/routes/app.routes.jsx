@@ -1,4 +1,5 @@
 import {Routes, Route } from 'react-router-dom'
+import { useAuth } from "../hooks/auth"
 
 import { NewDish } from '../pages/NewDish'
 import { EditDish } from '../pages/EditDish'
@@ -7,15 +8,21 @@ import { ShowDishUser } from '../pages/ShowDishUser'
 import { DetailsAdmin } from '../pages/DetailsAdmin'
 import { ShowDishAdmin } from '../pages/ShowDishAdmin'
 
+
 export function AppRoutes(){
+  const { user } = useAuth()
   return(
-    <Routes>
-      <Route path='/new' element={<NewDish />} />
-      <Route path='/edit' element={<EditDish />} />
-      <Route path='/home' element={<DetailsUser />} />
-      <Route path='/homeAdmin' element={<DetailsAdmin />} />
-      <Route path='/dish' element={<ShowDishUser />} />
-      <Route path='/dishAdmin' element={<ShowDishAdmin />} />
-    </Routes>
+    <div>
+      {user.isAdmin ? <Routes>
+        <Route path='/' element={<DetailsAdmin />} />
+        <Route path='/new' element={<NewDish />} />
+        <Route path='/edit/:id' element={<EditDish />} />
+        <Route path='/dishAdmin/:id' element={<ShowDishAdmin />} />
+      </Routes> : <Routes>
+        <Route path='/' element={<DetailsUser />} />
+        <Route path='/dish/:id' element={<ShowDishUser />} />
+      </Routes>
+    } 
+    </div>      
   )
 }

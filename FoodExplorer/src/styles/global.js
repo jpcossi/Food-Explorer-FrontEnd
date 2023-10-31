@@ -7,6 +7,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root{
+    font-size: 62.5%; // 10px
+  }
+
   body{
     background-color: ${({ theme }) => theme.COLORS.Dark_400};
     color: ${({ theme }) => theme.COLORS.Light_100};
@@ -16,7 +20,7 @@ export default createGlobalStyle`
 
   body, input, button, textarea{
     font-family: 'Roboto', sans-serif;
-    font-size: 16 px;
+    font-size: 1.6rem;
     outline: none;
   }
 

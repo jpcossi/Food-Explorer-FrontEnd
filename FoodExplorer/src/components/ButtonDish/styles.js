@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   border: none;
-  border-radius: 5px;
-  padding: 12px 24px 12px 24px;
+  border-radius: 0.5rem;
+  padding: 1.2rem 2.4rem 1.2rem 2.4rem;
 
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 2.4rem;
   text-align: center;
   
   color: ${({theme}) => theme.COLORS.Light_100};

@@ -3,19 +3,19 @@ import styled from "styled-components";
 export const Container = styled.div`  
   display: flex;
   align-items: center;
-  padding-right: 16px;
-  border-radius: 8px;
+  padding-right: 0.4rem;
+  border-radius: 0.8rem;
   border: ${({theme, isNew}) => isNew ? `1px dashed ${theme.COLORS.Light_500}` : "none"};
   
   background-color: ${({theme, isNew}) => isNew ? "transparent" : theme.COLORS.Light_600};
   
   > input {
-    padding: 10px 16px;
-    width: 100px;
-    height: 32px;    
-    font-size: 16px;
+    padding: 1rem 1rem;
+    width: 8.93rem;
+    height: 3.2rem;    
+    font-size: 1.6rem;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;      
     
     border: none;

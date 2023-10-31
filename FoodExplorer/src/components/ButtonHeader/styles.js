@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.button`
-  width: 216px;
+  width: 21.6rem;
   background-color: ${({ theme }) => theme.COLORS.Tints_tomato_100};
   color: ${({ theme }) => theme.COLORS.Light_100};
 
-  height: 56px;
-  border: 0px;
-  border-radius: 5px;
-  padding: 12px, 32px, 12px, 32px;
+  height: 5.6rem;
+  border: 0rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem, 3.2rem, 1.2rem, 3.2rem;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   font-family: 'Poppins', sans-serif;
   text-align: center;
 
