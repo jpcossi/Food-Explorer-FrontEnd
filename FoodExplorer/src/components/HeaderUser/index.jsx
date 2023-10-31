@@ -41,6 +41,8 @@ export function HeaderUser({ icon: Icon, children, title, loading = false, ...re
     })
   }
 
+  //joao@gmail.com
+
   return(
     <Container>
       <div className='main'>      
@@ -71,9 +73,11 @@ export function HeaderUser({ icon: Icon, children, title, loading = false, ...re
         <Button type='button' className='buttonMobile'>
           <Icon></Icon>
         </Button>
-        <Logout onClick={signOut}>
-          <RxExit/>
-        </Logout>
+        <Link to="/">
+          <Logout onClick={signOut}>
+            <RxExit/>
+          </Logout>
+        </Link> 
         <div className="break"></div>
         <div className='logOut hidden'>
           <button onClick={signOut}>Sair</button>

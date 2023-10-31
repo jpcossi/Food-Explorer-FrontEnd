@@ -76,10 +76,12 @@ export function HeaderAdmin({icon: Icon, children, title, loading = false, ...re
             >
               {loading ? 'Carregando...' : title}
             </Button>
+          </Link>
+          <Link to="/">
+            <Logout onClick={signOut}>
+              <RxExit/>
+            </Logout>
           </Link>  
-          <Logout onClick={signOut}>
-            <RxExit/>
-          </Logout>
           <div className='newDish hidden'>
             <Link to="/new">
               <button>Novo Prato</button>

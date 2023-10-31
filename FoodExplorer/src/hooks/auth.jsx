@@ -31,7 +31,7 @@ function AuthProvider({ children }){
     localStorage.removeItem("@foodexplorer:user")
     localStorage.removeItem("@foodexplorer:token")
 
-    setData({})
+    setData({})    
   }
 
 

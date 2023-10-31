@@ -183,7 +183,7 @@ export const Button = styled.button`
   }  
 `
 
-export const Logout = styled(Link)`
+export const Logout = styled.button`
   @media (min-width: 27.375em){
     border: none;
     background: none;
