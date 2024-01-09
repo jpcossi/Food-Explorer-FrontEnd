@@ -124,12 +124,21 @@ export function EditDish(){
 
   useEffect(() => {
     async function fetchDishes() {
+      let inputName = document.querySelector(".inputName")
+      let inputPrice = document.querySelector(".inputPrice")
+      let inputDescription = document.querySelector(".inputDescription")
       const response = await api.get(`/dishes/${params.id}`)
       setDish(response.data)
       setIngredients(response.data.ingredients)
+
+      inputName.value = response.data.name
+      inputDescription.value = response.data.description
+      const newPriceFormat = `R$ ${response.data.price/100}`
+      inputPrice.value = newPriceFormat
+      
     }    
-    
     fetchDishes();
+    
   }, []);
 
   useEffect(() => {
@@ -168,7 +177,7 @@ export function EditDish(){
                       <InputImage>                
                         <label htmlFor="avatar">
                           <Download></Download>
-                          {(imageFile === null || imageFile === undefined) ? <h2>Selecionar Imagem</h2> : <h2>{imageFile.name}</h2>}
+                          {(imageFile === null || imageFile === undefined) ? <h2>{dish.image}</h2> : <h2>{imageFile.name}</h2>}
                           <input 
                             id="avatar" 
                             type="file"
@@ -179,7 +188,8 @@ export function EditDish(){
                     </div>
                     <div className="divName">
                       <h2>Nome</h2>
-                      <InputText 
+                      <InputText
+                        className="inputName"
                         placeholder={dish.name}
                         onChange={e => setName(e.target.value)}>                  
                       </InputText>
@@ -224,6 +234,7 @@ export function EditDish(){
                     <div className="divPrice">
                       <h2>Preço</h2>
                       <InputText
+                        className="inputPrice"
                         placeholder={Oldprice}
                         onChange={e => setPrice((e.target.value) * (100))}>
                       </InputText>
@@ -233,6 +244,7 @@ export function EditDish(){
                     <div className="divDescription">
                       <h2>Descrição</h2>
                       <TextArea 
+                        className="inputDescription"                        
                         placeholder={dish.description}
                         onChange={e => setDescription(e.target.value)}> 
                       </TextArea>
