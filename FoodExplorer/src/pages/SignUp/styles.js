@@ -8,11 +8,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 7.3rem;
+    gap: 4.5rem;
     
     svg{
-      margin-top: 15.8rem;
-      margin-right: 19px;
+      margin-top: 5.8rem;
       width: 27.8rem;
       height: 4.4rem;
     } 
